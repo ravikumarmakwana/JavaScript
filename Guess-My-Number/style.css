@@ -1,0 +1,77 @@
+body {
+  background-color: black;
+}
+
+.board {
+  height: 80%;
+  width: 80%;
+  background-color: black;
+  border-width: 5px;
+  margin: 5% 5%;
+}
+.play-zone {
+  border-radius: 100px 0px 0px 0px;
+  height: 100%;
+  width: 50%;
+  float: left;
+  background-color: rgb(243, 243, 243);
+  text-align: center;
+}
+
+.game-status {
+  border-radius: 0px 0px 100px 0px;
+  height: 100%;
+  width: 50%;
+  background-color: rgb(41, 176, 238);
+  text-align: center;
+  float: right;
+}
+
+.input-number {
+  width: 100px;
+  height: 60px;
+  font-size: 40px;
+  border-radius: 25%;
+  margin: 5%;
+}
+
+.submit {
+  font-size: 30px;
+  background-color: teal;
+  color: white;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.sub-header {
+  color: rgb(236, 10, 123);
+}
+
+.error-message {
+  margin: 20px;
+}
+
+.stars {
+  margin: 50px 0px 0px 0px;
+}
+
+.play-zone-header {
+  margin: 15% 0% 0% 0%;
+}
+
+.rewords {
+  margin: 15% 0% 0% 0%;
+}
+
+.playagain {
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.score {
+  font-size: 30px;
+  color: white;
+}

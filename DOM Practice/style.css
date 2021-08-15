@@ -1,0 +1,16 @@
+input {
+  color: rgb(245, 37, 89);
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 10px;
+}
+button {
+  border-radius: 20px;
+  font-size: 25px;
+  margin: 10px;
+  width: 250px;
+  padding: 5px;
+  background-color: rgb(89, 0, 255);
+  color: wheat;
+}
