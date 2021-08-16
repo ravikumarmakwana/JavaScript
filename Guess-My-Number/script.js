@@ -5,6 +5,8 @@ document.querySelector(".score").textContent = "Total Life : " + score;
 document.querySelector(".submit").addEventListener("click", function () {
   let number = Number(document.querySelector(".input-number").value);
 
+  document.querySelector(".input-number").value = null;
+
   if (!number)
     document.querySelector(".error-message").textContent =
       "Please enter the value";
@@ -22,7 +24,7 @@ document.querySelector(".submit").addEventListener("click", function () {
 });
 
 function success_function(score) {
-  document.querySelector(".rewords").textContent = "Success";
+  document.querySelector(".rewords").textContent = "✨✨🎉✨✨ Success! 😊😊";
 
   if (score > 15) document.querySelector(".stars").textContent = "⭐⭐⭐";
   else if (score <= 15 && score > 10)
@@ -30,13 +32,16 @@ function success_function(score) {
   else if (score <= 10 && score > 5)
     document.querySelector(".stars").textContent = "⭐";
 
+  document.querySelector(".game-status").style.backgroundColor = "#00ff08";
   document.querySelector(".score").textContent = "Your score : " + score;
+  document.querySelector(".error-message").textContent = "Success";
 }
 
 function failer_function() {
-  document.querySelector(".rewords").textContent = "You Lose the game!";
+  document.querySelector(".rewords").textContent = "You Lose the game! 😭😭";
   document.querySelector(".score").textContent = "Your score : 0";
   document.querySelector(".stars").textContent = "";
+  document.querySelector(".game-status").style.backgroundColor = "#f50217";
 }
 
 document.querySelector(".playagain").addEventListener("click", function () {
@@ -45,4 +50,7 @@ document.querySelector(".playagain").addEventListener("click", function () {
   document.querySelector(".rewords").textContent = "";
   document.querySelector(".stars").textContent = "";
   document.querySelector(".score").textContent = "Total Life : " + score;
+  document.querySelector(".error-message").textContent = "";
+  document.querySelector(".game-status").style.backgroundColor =
+    "rgb(41, 176, 238)";
 });
