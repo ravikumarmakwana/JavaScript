@@ -1,17 +1,17 @@
-let timer;
+let labelTimer = document.querySelector(".timer");
 
-let setUpTimer = function (counter) {
-  timer = setInterval(function () {
-    const minute = `${Math.trunc(counter / 60)}`.padStart(2, 0);
-    const second = `${Math.trunc(counter % 60)}`.padStart(2, 0);
-    console.log(`${minute}:${second}`);
-    if (counter === 0) clearInterval(timer);
-    counter--;
+const liveClock = function () {
+  setInterval(function () {
+    labelTimer.textContent = new Intl.DateTimeFormat("en-IN", {
+      month: "short",
+      day: "2-digit",
+      hour12: true,
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      weekday: "long",
+    }).format(new Date());
   }, 1000);
 };
-
-document.querySelector("body").addEventListener("click", function () {
-  let count = 120;
-  if (timer) clearInterval(timer);
-  setUpTimer(10);
-});
+liveClock();
